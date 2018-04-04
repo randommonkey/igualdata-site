@@ -1,0 +1,38 @@
+extends ./partials/layout
+
+block title
+  title Mundial de la igualdad
+
+block css
+  link(rel="stylesheet", href="assets/css/index.css")
+
+block main
+  main.item-fill
+    .full-section.column.v-centered
+      .background.background-beige
+      .container#intro
+        img.intro-image.animated.zoomIn(src="assets/media/logo-lg.png", alt="Logo Mundial Feminista")
+        .intro-text.animated.fadeIn
+          p El Mundial de la Igualdad es una iniciativa que busca que los medios tradicionales y alternativos, organizaciones, clubes deportivos y marcas interesadas en el fútbol difundan, desarrollen y promuevan contenidos con una agenda social y de género más responsable.
+          .column.h-centered
+            a.animated.pulse.scroller(href="#hackaton-info" data-scroll) Saber más
+    section.container
+      h2.text-custom-blue.section-title Hackaton Argentina
+      #hackaton-info
+        p
+          | El sábado 14 de abril empieza el primer tiempo del 
+          span.highlight.text-custom-red mundial de la igualdad. 
+          | Te esperamos para empezar a palpitar el Mundial con una hackaton, historias de las mujeres en el fútbol contadas por sus protagonistas y feminismo
+        p Polideportivo Boedo de San Lorenzo, José Mármol 1715, CABA. 12 a 20hs
+    section(style="position: relative")
+      .background.background-blue
+      .container#info
+        .info-text
+          p.section-title Hackaton Colombia
+          p.coming Próximamente
+        .info-text
+          p.section-title Hackaton Perú
+          p.coming Próximamente
+block js
+  script(src="vendors/sweet-scroll.min.js")
+  script(src="assets/js/index.js")

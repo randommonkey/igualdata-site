@@ -1,0 +1,1 @@
+"use strict";var nav=document.querySelector("nav");function affixed(){var e=window.scrollY;220<e?nav.classList.add("affixed"):0===e&&nav.classList.remove("affixed")}document.addEventListener("DOMContenLoaded",function(){new SweetScroll({duration:500});affixed()}),document.addEventListener("scroll",function(e){affixed()});
