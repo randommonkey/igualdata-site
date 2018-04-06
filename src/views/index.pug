@@ -33,6 +33,22 @@ block main
         .info-text
           p.section-title Hackaton Perú
           p.coming Próximamente
+    section.container
+      h2.section-title.text-custom-blue Así quedaron los grupos
+      #app
+        .groups
+          .group-card(
+            v-for="(group, index) in groups",
+            :key="index"
+          )
+            p.group-letter Grupo {{ group.group.toUpperCase() }}
+            .group-team.line.v-centered(
+              v-for="(team, index) in group.teams",
+              :key="index"
+            )
+              img(:src="team.image | imageDir", alt="")
+              span {{ team.country }}
 block js
   script(src="vendors/sweet-scroll.min.js")
+  script(src="vendors/vue.min.js")
   script(src="assets/js/index.js")

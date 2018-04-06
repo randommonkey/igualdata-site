@@ -2952,6 +2952,10 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
+scrollmagic@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/scrollmagic/-/scrollmagic-2.0.5.tgz#ad7597341c76fb1f4a5bec12968a09223bd08dd9"
+
 "semver@2 || 3 || 4 || 5", semver@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
@@ -3226,6 +3230,10 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
+sweet-scroll@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/sweet-scroll/-/sweet-scroll-3.0.1.tgz#6472a9b97915550c3213970d1a33c7cec8657328"
+
 through2@^0.5.0, through2@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.5.1.tgz#dfdd012eb9c700e2323fd334f38ac622ab372da7"
@@ -3470,6 +3478,10 @@ vinyl@^0.5.0:
 void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+
+vue@^2.5.16:
+  version "2.5.16"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 
 watch@^0.11.0:
   version "0.11.0"

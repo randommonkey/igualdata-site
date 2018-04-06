@@ -14,6 +14,9 @@ const vendors = path.join(__dirname, 'dist/vendors/')
 gulp.task('vendors', function () {
   gulp.src('./node_modules/sweet-scroll/sweet-scroll.min.js')
     .pipe(gulp.dest(vendors))
+
+  gulp.src('./node_modules/vue/dist/vue.min.js')
+    .pipe(gulp.dest(vendors))
 })
 
 gulp.task('css', function (cb) {

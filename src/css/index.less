@@ -238,3 +238,25 @@ footer {
     }
   }
 }
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+.group-card {
+  padding: 5px;
+  .group-letter {
+    font-weight: 300;
+    margin: 0;
+    border-bottom: 1px solid @custom-beige;
+  }
+  .group-team {
+    font-weight: 300;
+    img {
+      width: 35px;
+      margin-right: 5px;
+    }
+  }
+}
