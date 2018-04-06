@@ -2345,6 +2345,10 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moveto@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/moveto/-/moveto-1.7.1.tgz#b97847c2c6a12b88a179afd4fee0718b6851797e"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -2952,10 +2956,6 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-scrollmagic@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/scrollmagic/-/scrollmagic-2.0.5.tgz#ad7597341c76fb1f4a5bec12968a09223bd08dd9"
-
 "semver@2 || 3 || 4 || 5", semver@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
@@ -3229,10 +3229,6 @@ supports-color@^5.3.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.3.0.tgz#5b24ac15db80fa927cf5227a4a33fd3c4c7676c0"
   dependencies:
     has-flag "^3.0.0"
-
-sweet-scroll@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/sweet-scroll/-/sweet-scroll-3.0.1.tgz#6472a9b97915550c3213970d1a33c7cec8657328"
 
 through2@^0.5.0, through2@^0.5.1:
   version "0.5.1"

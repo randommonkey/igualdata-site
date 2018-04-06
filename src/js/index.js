@@ -1,9 +1,12 @@
 const nav = document.querySelector('nav')
 
-document.addEventListener('DOMContenLoaded', () => {
-  const scroller = new SweetScroll({ duration: 500 })
-  affixed()
+const moveTo = new MoveTo({
+  tolerance: 100
 })
+const target = document.getElementById('hackaton')
+
+const trigger = document.querySelector('.scroller')
+moveTo.registerTrigger(trigger)
 
 document.addEventListener('scroll', (e) => {
   affixed()

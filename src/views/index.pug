@@ -15,8 +15,8 @@ block main
         .intro-text.animated.fadeIn
           p El Mundial de la Igualdad es una iniciativa que busca que los medios tradicionales y alternativos, organizaciones, clubes deportivos y marcas interesadas en el fútbol difundan, desarrollen y promuevan contenidos con una agenda social y de género más responsable.
           .column.h-centered
-            a.animated.pulse.scroller(href="#hackaton-info" data-scroll) Saber más
-    section.container
+            a.animated.pulse.scroller(href="#hackaton" data-scroll) Saber más
+    section.container#hackaton
       h2.text-custom-blue.section-title Hackaton Argentina
       #hackaton-info
         p
@@ -49,6 +49,6 @@ block main
               img(:src="team.image | imageDir", alt="")
               span {{ team.country }}
 block js
-  script(src="vendors/sweet-scroll.min.js")
+  script(src="vendors/moveTo.min.js")
   script(src="vendors/vue.min.js")
   script(src="assets/js/index.js")

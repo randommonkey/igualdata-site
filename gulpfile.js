@@ -12,7 +12,7 @@ const webserver = require('gulp-webserver')
 const vendors = path.join(__dirname, 'dist/vendors/')
 
 gulp.task('vendors', function () {
-  gulp.src('./node_modules/sweet-scroll/sweet-scroll.min.js')
+  gulp.src('./node_modules/moveto/dist/moveTo.min.js')
     .pipe(gulp.dest(vendors))
 
   gulp.src('./node_modules/vue/dist/vue.min.js')
