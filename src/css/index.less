@@ -187,6 +187,28 @@ nav.affixed {
   }
 }
 
+.hackaton-inscription {
+  margin: 0 0 50px;
+  a {
+    background: @custom-beige;
+    border-bottom: 5px solid rgb(222, 218, 184);
+    border-radius: 20px;
+    color: @custom-blue;
+    font-size: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.25 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    a {
+      font-size: 40px;
+    }
+  }
+}
+
 // More info
 #info {
   align-items: center;
