@@ -1,0 +1,55 @@
+nav {
+	background: @custom-beige;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	.logo {
+	  transform: scale(0);
+	  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	  width: 120px;
+	}
+	@media only screen and (min-width: 768px) {
+	  .logo {
+			width: 190px;
+	  }
+	}
+}
+  
+nav.affixed {
+	border-bottom: 1px solid #f4f4f4;
+	.logo {
+	  transform: scale(1);
+	  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	@media only screen and (min-width: 768px) {
+	  .logo {
+			width: 200px;
+	  }
+	}
+}
+
+// Footer 
+footer {
+  a:nth-child(1) img {
+    width: 70px
+  }
+  a:nth-child(2) img {
+    width: 60px
+  }
+  a:nth-child(3) img {
+    width: 100px
+  }
+  @media only screen and (min-width: 768px) {
+    a:nth-child(1) img {
+      width: 100%;
+    }
+    a:nth-child(2) img {
+      width: 100px
+    }
+    a:nth-child(3) img {
+      width: 300px
+    }
+  }
+}

@@ -1,0 +1,46 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		title= title || 'Igualdata'
+
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		link(href="/styles/site.min.css", rel="stylesheet")
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		link(rel="stylesheet", href="https://cdn.jsdelivr.net/gh/ddazal/align.css/dist/align.min.css")
+
+		if user && user.canAccessKeystone
+			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		//-[if lt IE 9]
+			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
+			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+		//-[endif]
+
+		block css
+		block head
+
+	body
+		#wrapper.column
+			nav: .container
+				.line.v-centered
+					img.logo(src="assets/media/logo-sm.png" alt="El mundial de la igualdad")
+			block main
+			footer.column.v-centered
+				.container
+					p Un proyecto de:
+					.line.justify-between.v-centered
+						a(href="https://www.datasketch.co/es" target="_blank" rel="noopener noreferrer"): img(src="assets/media/ds.png", alt="")
+						a(href="http://economiafeminita.com" target="_blank" rel="noopener noreferrer"): img(src="assets/media/ef.png", alt="" width="100px")
+						a(href="https://www.futbolfemenino.tv/" target="_blank" rel="noopener noreferrer"): img(src="assets/media/ff.svg", alt="" width="300px")
+		if user && user.canAccessKeystone
+			script(src='/keystone/js/content/editor.js')
+		script(src="/js/views/default.js")
+		block js
