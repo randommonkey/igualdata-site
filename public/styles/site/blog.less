@@ -1,0 +1,39 @@
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.post {
+  max-width: 360px;
+  .post-body {
+    background: white;
+    padding: 10px;
+  }
+  .post-date {
+    font-size: 14px;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    a {
+      color: inherit;
+    }
+  }
+}
+
+// Individual
+.post-header {
+  margin: 40px 0
+}
+.post-content {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    width: 60%;
+  }
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

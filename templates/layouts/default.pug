@@ -26,12 +26,16 @@ html
 
 		block css
 		block head
+		block vars
 
 	body
 		#wrapper.column
 			nav: .container
-				.line.v-centered
-					img.logo(src="/images/logo-sm.png" alt="El mundial de la igualdad")
+				.line.v-centered.justify-between
+					a(href="/"): img.logo(src="/images/logo-sm.png" alt="El mundial de la igualdad" class=(showed ? 'showed' : ''))
+					.menu
+						each link in locals.navLinks
+							a(href=`${link.href}`)= link.label
 			block main
 			footer.column.v-centered
 				.container
