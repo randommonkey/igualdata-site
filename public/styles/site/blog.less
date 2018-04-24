@@ -1,10 +1,11 @@
-.posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-}
-
 .post {
-  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cacece;
+  img {
+    margin: 0 auto;
+  }
   .post-body {
     background: white;
     padding: 10px;
@@ -19,6 +20,18 @@
       color: inherit;
     }
   }
+  .post-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300px;
+    margin: 10px 0;
+  }
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    img {
+      margin: 0 20px 0 0;
+    }
+  }
 }
 
 // Individual
@@ -31,9 +44,16 @@
     margin: 0 auto;
     width: 60%;
   }
-  p {
+  p, li {
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 20px;
   }
+}
+.post-header-image img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }

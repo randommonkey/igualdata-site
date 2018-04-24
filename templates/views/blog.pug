@@ -8,6 +8,7 @@ mixin regular(post)
 			if post.publishedDate
 				span.post-date #{post._.publishedDate.format('DD/MM')}
 			p.post-title: a(href=`/blog/post/${post.slug}`)= post.title
+			p.post-description #{post.content.brief.html}
 
 block vars
 	- var showed = true

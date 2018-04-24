@@ -10,13 +10,14 @@ block main
 			if !data.post
 				h2 Esta entrada no existe
 			else
-				.post-header.line.justify-between.v-centered
-					.post-header-title
+				.post-header.column
+					.post-content
 						h1= data.post.title
 						if data.post.publishedDate
 							h5 #{data.post._.publishedDate.format('DD/MM')} 
 					if data.post.image.exists
-						img(src=data.post._.image.fit(750,450)).img-responsive
+						.post-header-image
+							img(src=data.post._.image.fit(750,450)).img-responsive
 				.post-content
 					!= data.post.content.full.html
 
