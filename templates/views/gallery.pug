@@ -48,16 +48,5 @@ block main
 			h3.text-muted There are no image galleries yet.
 
 block js
-	script(src="/js/jquery/jquery-2.1.4.min.js")
 	script(src="/js/bootstrap/bootstrap-3.3.5.min.js")
-	script.
-		function setSpacer () {
-			const navHeight = document.querySelector('nav').offsetHeight
-			document.querySelector('.spacer').style.height = `${navHeight}px`
-		}
-
-		setSpacer()
-
-		window.addEventListener('resize', function () {
-			setSpacer()
-		})
+	script(src="/js/views/inner.js")

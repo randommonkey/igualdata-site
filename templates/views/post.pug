@@ -22,14 +22,4 @@ block main
 					!= data.post.content.full.html
 
 block js
-	script.
-		function setSpacer () {
-			const navHeight = document.querySelector('nav').offsetHeight
-			document.querySelector('.spacer').style.height = `${navHeight}px`
-		}
-
-		setSpacer()
-
-		window.addEventListener('resize', function () {
-			setSpacer()
-		})
+	script(src="/js/views/inner.js")
