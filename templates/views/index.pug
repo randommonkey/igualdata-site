@@ -1,5 +1,23 @@
 extends ../layouts/default
 
+mixin featuredEvent(event)
+	.featured-event
+		h2.text-center= event.title
+		.featured-event-body
+			.featured-event-image
+				img.img-responsive(src=`${event.image.secure_url}`, alt="Imagen")
+			.featured-event-content
+				div!= event.content.html
+				.text-center
+					a.inscription-btn(href=`${event.inscription}`) Inscripción
+
+mixin regularEvent(event)
+	.regular-event
+		h3= event.title
+		.regular-event-content!= event.content.html
+		a(href=`${event.post}`) Leer más
+
+
 block head
 	script(src="/js/vendors/vue.min.js")
 
@@ -14,23 +32,13 @@ block main
 					.column.h-centered
 						a.animated.pulse.scroller(href="#hackaton" data-scroll) Saber más
 		section.container#hackaton
-			h2.text-custom-blue.section-title Hackaton Argentina
-			#hackaton-info
-				p
-					| El sábado 14 de abril empieza el primer tiempo del 
-					span.highlight.text-custom-red mundial de la igualdad. 
-					| Te esperamos para empezar a palpitar el Mundial con una hackaton, historias de las mujeres en el fútbol contadas por sus protagonistas y feminismo
-				p Polideportivo Boedo de San Lorenzo, José Mármol 1715, CABA. 12 a 20hs
-			.hackaton-inscription.column.centered
-				a.column.centered(href="https://docs.google.com/forms/d/e/1FAIpQLSenfbikfCz9PFjdExvjgxT8cVZ3FzsSLZxojDsg-MK-KBa6pg/viewform" target="_blank") Inscripción
-		.line.centered(style="background: #f2eecc")      
-			img(src="/images/flyer.png", alt="" style="max-width: 100%")
+			+featuredEvent(data.featured)
+			each event in data.events
+				if !event.featured
+					+regularEvent(event)
 		section(style="position: relative")
 			.background.background-blue
 			.container#info
-				.info-text
-					p.section-title Hackaton Colombia
-					p.coming Próximamente
 				.info-text
 					p.section-title Hackaton Perú
 					p.coming Próximamente

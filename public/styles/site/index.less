@@ -113,42 +113,56 @@ body {
   animation-duration: 1s;
 }
 
-// Hackaton info
-#hackaton-info {
-  p {
+// Featured event
+.featured-event {
+  margin-bottom: 20px;
+  h2 {
     color: @custom-blue;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0 0 50px;
-    width: 100%;
-    @media only screen and (min-width: 768px) {
-      font-size: 30px;
-      width: 80%;
-    }
-    @media only screen and (min-width: 992px) {
-      width: 50%;
-    }
-    &:nth-child(1) {
-      margin-top: 50px;
-    }
-    &:nth-child(odd) {
-      margin-left: auto;
-      text-align: right;
-    }
-    &:nth-child(even) {
-      margin-right: auto;
+    margin: 20px 0;
+  }
+  .featured-event-body {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
-}
-
-.hackaton-inscription {
-  margin: 0 0 50px;
-  a {
+  .featured-event-image {
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      width: 40%;
+    }
+    @media screen and (min-width: 992px) {
+      width: 45%;
+    }
+  }
+  .featured-event-content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    width: 100%;
+    p {
+      margin: 0 0 20px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 992px) {
+      width: 45%;
+    }
+  }
+  .inscription-btn {
     background: @custom-beige;
     border-bottom: 5px solid rgb(222, 218, 184);
     border-radius: 20px;
     color: @custom-blue;
-    font-size: 30px;
+    display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
     transition: all 0.25 cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -156,10 +170,18 @@ body {
       transform: translateY(5px);
     }
   }
-  @media only screen and (min-width: 768px) {
-    a {
-      font-size: 40px;
-    }
+}
+
+.regular-event {
+  padding: 20px 0;
+  border-top: 1px solid #cacece;
+  h3 {
+    margin: 0 0 20px;
+  }
+  .regular-event-content, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
   }
 }
 
