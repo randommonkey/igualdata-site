@@ -22,6 +22,11 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
+			if (result) {
+				locals.title = `${locals.data.post.title} | El Mundial de la igualdad`;
+			} else {
+				locals.title = 'El Mundial de la igualdad';
+			}
 			next(err);
 		});
 

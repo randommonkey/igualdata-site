@@ -7,6 +7,7 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'gallery';
+	locals.title = 'Galería | El Mundial de la igualdad'
 
 	// Load the galleries by sortOrder
 	view.query('galleries', Gallery.find().sort('sortOrder'));

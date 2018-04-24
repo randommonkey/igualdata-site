@@ -7,6 +7,7 @@ exports = module.exports = function (req, res) {
 
 	// Init locals
 	locals.section = 'blog';
+	locals.title = 'Blog | El Mundial de la igualdad'
 	locals.data = {
 		posts: [],
 	};
