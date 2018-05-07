@@ -9,11 +9,11 @@ block main
 		if galleries.length
 			each gallery in galleries
 				h2= gallery.name
-				.carousel.slide(data-ride="carousel" id=`carousel-${gallery.name.replace(' ', '-').toLowerCase()}` style="height: 350px")
+				.carousel.slide(data-ride="carousel" id=`carousel-${gallery.key}` style="height: 500px")
 					ol.carousel-indicators
 						each image, index in gallery.images
 							li(
-								data-target=`#carousel-${gallery.name.replace(' ', '-').toLowerCase()}`,
+								data-target=`#carousel-${gallery.key}`,
 								data-slide-to=`${index}`,
 								class=(index === 0 ? 'active' : ''))
 					
@@ -25,12 +25,12 @@ block main
 								)
 
 					a.left.carousel-control(
-						href=`#carousel-${gallery.name.replace(' ', '-').toLowerCase()}`,
+						href=`#carousel-${gallery.key}`,
 						data-slide="prev"
 						)
 						span.glyphicon.glyphicon-chevron-left
 					a.right.carousel-control(
-						href=`#carousel-${gallery.name.replace(' ', '-').toLowerCase()}`,
+						href=`#carousel-${gallery.key}`,
 						data-slide="next"
 						)
 						span.glyphicon.glyphicon-chevron-right
