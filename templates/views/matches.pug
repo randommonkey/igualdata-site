@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block css
+  style.
+    iframe {
+      min-width: 100%;
+      width: 1px;
+    }
+
+block vars
+  - var showed = true
+
+block main
+  .spacer
+  main.item-fill
+    iframe(id="iframe", src="https://randommonkey.shinyapps.io/igualdata-notes-matches/", frameborder="0")
+
+block js
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.1/iframeResizer.min.js")
+  script(src="/js/views/inner.js")
+  script.
+    iFrameResize({ heightCalculationMethod: 'bodyScroll' }, '#iframe')

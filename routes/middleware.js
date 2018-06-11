@@ -8,6 +8,7 @@ exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
 		{ label: 'Blog', key: 'blog', href: '/blog' },
 		{ label: 'Galería', key: 'gallery', href: '/galeria' },
+		{ label: 'Notas de partidos', key: 'matches', href: '/notas-de-partidos' },
 	];
 	res.locals.user = req.user;
 	next();
