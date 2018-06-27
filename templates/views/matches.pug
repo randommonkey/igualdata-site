@@ -19,4 +19,12 @@ block js
   script(src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.1/iframeResizer.min.js")
   script(src="/js/views/inner.js")
   script.
-    iFrameResize({ heightCalculationMethod: 'bodyScroll', checkOrigin: false, minHeight: 1000 }, '#iframe')
+    var iframe = document.getElementById('iframe');
+    var search = location.search.substring(1);
+    if (search) {
+      var params = JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) });
+      var query = 'pais1=' + params.pais1 + '&pais2=' + params.pais2
+      var url = iframe.getAttribute('src')
+      iframe.setAttribute('src', url + '&' + query)
+    }
+    iFrameResize({ heightCalculationMethod: 'bodyScroll', checkOrigin: false, minHeight: 1500 }, '#iframe');
