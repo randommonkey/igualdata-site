@@ -1,5 +1,4 @@
 const keystone = require('keystone');
-const Post = keystone.list('Post');
 
 exports = module.exports = function (req, res) {
 	const view = new keystone.View(req, res);
@@ -7,7 +6,7 @@ exports = module.exports = function (req, res) {
 
 	// Init locals
 	locals.section = 'blog';
-	locals.title = 'Blog | El Mundial de la igualdad'
+	locals.title = 'Blog | El Mundial de la igualdad';
 	locals.data = {
 		posts: [],
 	};

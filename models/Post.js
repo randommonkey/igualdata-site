@@ -20,7 +20,7 @@ Post.add({
 	content: {
 		brief: { type: Types.Markdown, wysiwyg: true, height: 150 },
 		extended: { type: Types.Markdown, wysiwyg: true, height: 400 },
-	}
+	},
 });
 
 Post.schema.virtual('content.full').get(function () {

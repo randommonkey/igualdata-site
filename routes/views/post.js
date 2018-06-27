@@ -1,10 +1,10 @@
 const keystone = require('keystone');
-const Post = keystone.list('Post').model
+const Post = keystone.list('Post').model;
 
 exports = module.exports = function (req, res) {
 	const view = new keystone.View(req, res);
 	const { locals } = res;
-	const { post } = req.params
+	const { post } = req.params;
 
 	// Set locals
 	locals.section = 'blog';
@@ -14,7 +14,6 @@ exports = module.exports = function (req, res) {
 
 	// Load the current post
 	view.on('init', function (next) {
-
 		var q = Post.findOne({
 			state: 'published',
 			slug: post,

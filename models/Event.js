@@ -14,12 +14,12 @@ const Event = new keystone.List('Event', {
 Event.add({
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
-  publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-  featured: { type: Types.Boolean },
-  inscription: { type: String, dependsOn: { featured: true } },
+	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
+	featured: { type: Types.Boolean },
+	inscription: { type: String, dependsOn: { featured: true } },
 	image: { type: Types.CloudinaryImage, folder: 'igualdata/', dependsOn: { featured: true } },
-  content: { type: Types.Markdown, wysiwyg: true, height: 400 },
-  post: { type: String }
+	content: { type: Types.Markdown, wysiwyg: true, height: 400 },
+	post: { type: String },
 });
 
 

@@ -13,10 +13,10 @@ block vars
 block main
   .spacer
   main.item-fill
-    iframe(id="iframe", src="https://randommonkey.shinyapps.io/igualdata-notes-matches/", frameborder="0")
+    iframe(id="iframe", src="http://figusdelaigualdad.now.sh/", frameborder="0")
 
 block js
   script(src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.1/iframeResizer.min.js")
   script(src="/js/views/inner.js")
   script.
-    iFrameResize({ heightCalculationMethod: 'bodyScroll' }, '#iframe')
+    iFrameResize({ heightCalculationMethod: 'bodyScroll', checkOrigin: false, minHeight: 1000 }, '#iframe')
