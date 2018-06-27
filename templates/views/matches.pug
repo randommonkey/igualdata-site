@@ -11,13 +11,12 @@ block vars
   - var showed = true
 
 block main
-  .spacer
   main.item-fill
     iframe(id="iframe", src="https://figusdelaigualdad.now.sh/?ocultarHeader=true", frameborder="0")
 
 block js
   script(src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.1/iframeResizer.min.js")
-  script(src="/js/views/inner.js")
+  //- script(src="/js/views/inner.js")
   script.
     var iframe = document.getElementById('iframe');
     var search = location.search.substring(1);

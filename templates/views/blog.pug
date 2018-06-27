@@ -14,7 +14,6 @@ block vars
 	- var showed = true
 
 block main
-	.spacer
 	main.item-fill.container.column.v-centered
 		.posts
 			each post in data.posts.results
@@ -35,5 +34,5 @@ block main
 		//- 		else
 		//- 			li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
 
-block js
-	script(src="/js/views/inner.js")
+//- block js
+//- 	script(src="/js/views/inner.js")

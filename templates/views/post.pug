@@ -4,7 +4,6 @@ block vars
 	- var showed = true
 
 block main
-	.spacer
 	main.item-fill.container.column.v-centered
 		article
 			if !data.post
@@ -21,5 +20,5 @@ block main
 				.post-content
 					!= data.post.content.full.html
 
-block js
-	script(src="/js/views/inner.js")
+//- block js
+//- 	script(src="/js/views/inner.js")
