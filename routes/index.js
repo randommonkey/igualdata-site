@@ -18,5 +18,5 @@ exports = module.exports = function (app) {
 	app.get('/blog', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/galeria', routes.views.gallery);
-	app.get('/figus-de-la-igualdad', routes.views.matches);
+	app.get('/figus-de-la-igualdad', routes.views.app);
 };
