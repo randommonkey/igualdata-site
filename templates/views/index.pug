@@ -32,7 +32,8 @@ block main
 					.column.h-centered
 						a.animated.pulse.scroller(href="#hackaton" data-scroll) Saber más
 		section.container#hackaton
-			+featuredEvent(data.featured)
+			if data.featured
+				+featuredEvent(data.featured)
 			each event in data.events
 				if !event.featured
 					+regularEvent(event)

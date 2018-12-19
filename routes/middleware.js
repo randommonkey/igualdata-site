@@ -9,6 +9,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Blog', key: 'blog', href: '/blog' },
 		{ label: 'Galería', key: 'gallery', href: '/galeria' },
 		{ label: 'Figus de la igualdad', key: 'matches', href: '/figus-de-la-igualdad' },
+		{ label: 'Datos', key: 'datos', href: 'https://docs.google.com/spreadsheets/d/1DAonyoIKT1G7OJMG1Gwr4knkt4PfDUW7s8NhWPOUk8k/edit?ts=5c1a4c4c#gid=0' },
 	];
 	res.locals.user = req.user;
 	next();
